@@ -1,0 +1,21 @@
+README.md
+  s_3d26894a5b68de::t_bff416c2735380 1-22
+server/zbpack.json
+  s_3d26894a5b68de::t_05bcc96649712c 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "119c9ddcb19bfe4d5bb60b0e9306d8e7babd1f46",
+  "prompts": {},
+  "sessions": {
+    "s_3d26894a5b68de": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "77f1ba43-5828-4e50-8cfc-71917e2983c4",
+        "model": "default"
+      },
+      "human_author": "wuw5 <wuw5@trip.com>"
+    }
+  }
+}
