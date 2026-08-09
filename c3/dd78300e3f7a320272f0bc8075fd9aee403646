@@ -1,0 +1,21 @@
+.github/workflows/docker-publish.yml
+  s_3d26894a5b68de::t_33481f6bde6ecf 25-29,33-35,39-40,45,50,54
+server/pnpm-lock.yaml
+  ai_agent 1-6800
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "c3dd78300e3f7a320272f0bc8075fd9aee403646",
+  "prompts": {},
+  "sessions": {
+    "s_3d26894a5b68de": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "77f1ba43-5828-4e50-8cfc-71917e2983c4",
+        "model": "default"
+      },
+      "human_author": "wuw5 <wuw5@trip.com>"
+    }
+  }
+}
