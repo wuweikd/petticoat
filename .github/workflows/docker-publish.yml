@@ -36,8 +36,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pnpm import
-          pnpm install --frozen-lockfile=false
+          pnpm install --frozen-lockfile
           test -x node_modules/.bin/prisma
           test -x node_modules/.bin/nest
 
