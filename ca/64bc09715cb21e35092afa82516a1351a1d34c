@@ -1,0 +1,21 @@
+server/Dockerfile
+  s_3d26894a5b68de::t_37af61b2903120 1,7-12
+.github/workflows/docker-publish.yml
+  s_3d26894a5b68de::t_329e4ef3f10a37 18-20,25-45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "ca64bc09715cb21e35092afa82516a1351a1d34c",
+  "prompts": {},
+  "sessions": {
+    "s_3d26894a5b68de": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "77f1ba43-5828-4e50-8cfc-71917e2983c4",
+        "model": "default"
+      },
+      "human_author": "wuw5 <wuw5@trip.com>"
+    }
+  }
+}
