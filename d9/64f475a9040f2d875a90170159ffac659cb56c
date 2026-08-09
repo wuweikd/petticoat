@@ -1,0 +1,23 @@
+server/package.json
+  s_3d26894a5b68de::t_8dd51df783e3a8 40
+server/package-lock.json
+  ai_agent 22
+server/pnpm-lock.yaml
+  ai_agent 38-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "d964f475a9040f2d875a90170159ffac659cb56c",
+  "prompts": {},
+  "sessions": {
+    "s_3d26894a5b68de": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "77f1ba43-5828-4e50-8cfc-71917e2983c4",
+        "model": "default"
+      },
+      "human_author": "wuw5 <wuw5@trip.com>"
+    }
+  }
+}
