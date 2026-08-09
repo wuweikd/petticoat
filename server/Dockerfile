@@ -10,5 +10,7 @@ COPY package.json package-lock.json ./
 COPY prisma ./prisma
 COPY node_modules ./node_modules
 COPY dist ./dist
+COPY start.sh ./start.sh
+RUN chmod +x start.sh
 EXPOSE 3000
-CMD ["sh", "-c", "./node_modules/.bin/prisma db push --skip-generate && node dist/src/main.js"]
+CMD ["./start.sh"]
