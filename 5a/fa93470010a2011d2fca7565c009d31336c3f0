@@ -1,0 +1,19 @@
+server/Dockerfile
+  s_3d26894a5b68de::t_3d03b92d7c0044 1,8-12,14-15,26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "5afa93470010a2011d2fca7565c009d31336c3f0",
+  "prompts": {},
+  "sessions": {
+    "s_3d26894a5b68de": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "77f1ba43-5828-4e50-8cfc-71917e2983c4",
+        "model": "default"
+      },
+      "human_author": "wuw5 <wuw5@trip.com>"
+    }
+  }
+}
