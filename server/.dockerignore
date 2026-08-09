@@ -1,5 +1,3 @@
-node_modules
-dist
 coverage
 uploads
 .env
@@ -7,3 +5,10 @@ uploads
 *.log
 .git
 .DS_Store
+src
+test
+*.md
+eslint.config.mjs
+nest-cli.json
+tsconfig*.json
+zbpack.json
