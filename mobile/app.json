@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Petticoat",
+    "slug": "petticoat",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "petticoat",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.petticoat.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F7F1E8",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.petticoat.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#F7F1E8"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "用于为穿搭帖选择封面图片",
+          "cameraPermission": "用于拍摄穿搭封面"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+.env
+.env.local
+coverage/
+.turbo/
+mobile/.expo/
+mobile/ios/
+mobile/android/
+admin/dist/
+server/dist/
+server/generated/
+server/uploads/
+tmp/

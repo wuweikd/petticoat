@@ -1,0 +1,6 @@
+{
+  "$schema": "https://schema.zeabur.app/zbpack.json",
+  "build_command": "npm run build",
+  "start_command": "npm run start:zeabur",
+  "node_version": "20"
+}
