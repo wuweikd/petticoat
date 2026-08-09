@@ -30,18 +30,25 @@ jobs:
           cache-dependency-path: server/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          test -x node_modules/.bin/prisma
+          test -x node_modules/.bin/nest
+          npm ls prisma @prisma/client --depth=0
 
       - name: Generate Prisma client
-        run: npx prisma generate
+        run: ./node_modules/.bin/prisma generate
         env:
           DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/postgres
 
       - name: Build Nest app
-        run: npm run build
+        run: ./node_modules/.bin/nest build
 
       - name: Prune dev dependencies
-        run: npm prune --omit=dev
+        run: |
+          npm prune --omit=dev
+          test -x node_modules/.bin/prisma
+          test -f dist/main.js
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
