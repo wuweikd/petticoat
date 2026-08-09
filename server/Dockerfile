@@ -1,13 +1,17 @@
 FROM node:20-bookworm AS build
 WORKDIR /app
 ENV DATABASE_URL="postgresql://postgres:postgres@127.0.0.1:5432/postgres"
+ENV NPM_CONFIG_UPDATE_NOTIFIER=false
+ENV NPM_CONFIG_FUND=false
+ENV NPM_CONFIG_AUDIT=false
 RUN apt-get update \
   && apt-get install -y --no-install-recommends openssl ca-certificates \
-  && rm -rf /var/lib/apt/lists/* \
-  && npm install -g npm@10.9.2
+  && rm -rf /var/lib/apt/lists/*
 COPY package.json package-lock.json ./
 COPY prisma ./prisma
-RUN npm install --ignore-scripts \
+# npm may print "Exit handler never called!" under BuildKit and return non-zero
+# even when the install completed; verify bins explicitly afterwards.
+RUN npm ci --ignore-scripts || npm install --ignore-scripts || true \
   && test -x node_modules/.bin/prisma \
   && test -x node_modules/.bin/nest \
   && ./node_modules/.bin/prisma generate
