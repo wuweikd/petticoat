@@ -50,7 +50,7 @@ jobs:
 
       - name: Verify build output
         run: |
-          test -f dist/main.js
+          test -f dist/src/main.js
           test -e node_modules/.bin/prisma
           # Keep full node_modules (pnpm layout). Image size is acceptable for deploy.
 
