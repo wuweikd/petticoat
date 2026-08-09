@@ -48,11 +48,11 @@ jobs:
       - name: Build Nest app
         run: pnpm exec nest build
 
-      - name: Prune dev dependencies
+      - name: Verify build output
         run: |
-          pnpm prune --prod
-          test -x node_modules/.bin/prisma
           test -f dist/main.js
+          test -e node_modules/.bin/prisma
+          # Keep full node_modules (pnpm layout). Image size is acceptable for deploy.
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
