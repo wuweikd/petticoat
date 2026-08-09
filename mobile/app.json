@@ -46,6 +46,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "apiUrl": "https://upqcuzpahmdl.cloud.sealos.io/api"
     }
   }
 }

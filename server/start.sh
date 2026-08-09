@@ -13,5 +13,9 @@ export DATABASE_URL="$app_url"
 echo "Pushing Prisma schema..."
 ./node_modules/.bin/prisma db push --skip-generate
 
+echo "Seeding demo data (upsert)..."
+./node_modules/.bin/ts-node --compiler-options '{"module":"CommonJS"}' prisma/seed.ts \
+  || echo "Seed failed (continuing)."
+
 echo "Starting Petticoat API..."
 exec node dist/src/main.js
